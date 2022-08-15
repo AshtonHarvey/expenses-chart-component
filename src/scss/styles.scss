@@ -10,16 +10,18 @@ body {
 .expense-component {
   font-family: sans-serif;
   display: grid;
-  background-color: var(--Very-pale-orange);
   &__header {
+    background-color: var(--Very-pale-orange);
     display: flex;
     justify-content: space-between;
     padding: 1rem;
     background-color: var(--Soft-red);
     border-radius: 10px;
     color: var(--Very-pale-orange);
+    margin-bottom: 1rem;
   }
   &__body {
+    background-color: var(--Very-pale-orange);
     background-color: var(--Very-pale-orange);
     border-radius: 10px;
   }
