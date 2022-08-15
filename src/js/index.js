@@ -1,10 +1,65 @@
-import "../scss/index.scss";
+import "../scss/variables.scss";
 
-document.getElementById("app").innerHTML = `
-<h1>Hello Vanilla!</h1>
-<div>
-  We use the same configuration as Parcel to bundle this sandbox, you can find more
-  info about Parcel 
-  <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">here</a>.
-</div>
-`;
+const data = require("/data.json");
+
+const days = data.map((object) => {
+  return object["day"];
+});
+
+const amounts = data.map((object) => {
+  return object["amount"];
+});
+
+const softRed = "rgba(236, 119, 95, 1)";
+const cyan = "rgba(118, 181, 188, 1)";
+
+const colors = [softRed, softRed, cyan, softRed, softRed, softRed, softRed];
+
+new Chart("expense-component__body__chart-container__chart", {
+  type: "bar",
+  data: {
+    labels: days,
+    datasets: [
+      {
+        backgroundColor: colors,
+        data: amounts,
+      },
+    ],
+  },
+
+  options: {
+    responsive: true,
+    maintainAspectRation: false,
+    plugins: {
+      legend: {
+        display: false,
+      },
+    },
+
+    scales: {
+      y: {
+        beginAtZero: true,
+        ticks: {
+          display: false,
+        },
+        grid: {
+          display: false,
+          borderWidth: 0,
+        },
+      },
+      x: {
+        beginAtZero: true,
+        ticks: {
+          display: true,
+        },
+        grid: {
+          display: false,
+          borderWidth: 0,
+        },
+      },
+    },
+  },
+});
+
+console.log(days);
+console.log(amounts);

@@ -4,49 +4,75 @@
     <title>Expense Chart Component</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./src/scss/index.scss" />
-    <script src="./src/js/index.js" async></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.js"
+      integrity="sha512-d6nObkPJgV791iTGuBoVC9Aa2iecqzJRE0Jiqvk85BhLHAPhWqkuBiQb1xz2jvuHNqHLYoN3ymPfpiB1o+Zgpw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./src/js/index.js" defer></script>
   </head>
 
   <body>
     <div class="expense-component">
+      <!-- head section -->
       <div class="expense-component__header">
         <div class="expense-component__header__balance-container">
           <p class="expense-component__header__balance-container__description">
             My balance
           </p>
           <p class="expense-component__header__balance-container__amount">
-            $098234
+            $921.48
           </p>
         </div>
         <div class="expense-component__header__image-container">
           <img src="./images/logo.svg" alt="" />
         </div>
       </div>
+
+      <!-- body section  -->
       <div class="expense-component__body">
         <p class="expense-component__body__description">
           Spending - Last 7 days
         </p>
+        <div class="expense-component__body__chart-container">
+          <canvas id="expense-component__body__chart-container__chart">
+          </canvas>
+          <hr
+            class="expense-component__body__chart-container__horizontal-line"
+          />
+        </div>
 
-        <div class="expense-component__body__chart"></div>
-
-        <!-- add line to separate sections -->
         <div class="expense-component__body__total-container">
-          <div class="expense-component__body__total-container__left">
+          <div class="expense-component__body__total-container__left-side">
             <p
-              class="pexpense-component__body__total-container__left__description"
+              class="expense-component__body__total-container__left-side__description"
             >
               Total this month
             </p>
-            <p class="pexpense-component__body__total-container__total">
-              $2345
+            <p
+              class="expense-component__body__total-container__left-side__total"
+            >
+              $478.33
             </p>
           </div>
+
           <div class="expense-component__body__total-container__right">
-            <p class="pexpense-component__body__total-container__left__percent">
-              +6.2%
+            <p
+              class="expense-component__body__total-container__right-side__percent"
+            >
+              +2.4%
             </p>
-            <p class="pexpense-component__body__total-container__description">
+            <p
+              class="expense-component__body__total-container__right-side__description"
+            >
               from last month
             </p>
           </div>
