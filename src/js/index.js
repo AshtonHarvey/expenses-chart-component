@@ -60,6 +60,3 @@ new Chart("expense-component__body__chart-container__chart", {
     },
   },
 });
-
-console.log(days);
-console.log(amounts);
