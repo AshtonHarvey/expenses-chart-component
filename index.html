@@ -9,10 +9,49 @@
   </head>
 
   <body>
-    <header></header>
-    <main>
-      <div id="app"></div>
-    </main>
-    <footer></footer>
+    <div class="expense-component">
+      <div class="expense-component__header">
+        <div class="expense-component__header__balance-container">
+          <p class="expense-component__header__balance-container__description">
+            My balance
+          </p>
+          <p class="expense-component__header__balance-container__amount">
+            $098234
+          </p>
+        </div>
+        <div class="expense-component__header__image-container">
+          <img src="./images/logo.svg" alt="" />
+        </div>
+      </div>
+      <div class="expense-component__body">
+        <p class="expense-component__body__description">
+          Spending - Last 7 days
+        </p>
+
+        <div class="expense-component__body__chart"></div>
+
+        <!-- add line to separate sections -->
+        <div class="expense-component__body__total-container">
+          <div class="expense-component__body__total-container__left">
+            <p
+              class="pexpense-component__body__total-container__left__description"
+            >
+              Total this month
+            </p>
+            <p class="pexpense-component__body__total-container__total">
+              $2345
+            </p>
+          </div>
+          <div class="expense-component__body__total-container__right">
+            <p class="pexpense-component__body__total-container__left__percent">
+              +6.2%
+            </p>
+            <p class="pexpense-component__body__total-container__description">
+              from last month
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

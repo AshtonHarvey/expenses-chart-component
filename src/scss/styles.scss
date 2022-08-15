@@ -1,5 +1,26 @@
 @use "./variables.scss";
 
 body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: var(--Cream);
+}
+
+.expense-component {
   font-family: sans-serif;
+  display: grid;
+  background-color: var(--Very-pale-orange);
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: var(--Soft-red);
+    border-radius: 10px;
+    color: var(--Very-pale-orange);
+  }
+  &__body {
+    background-color: var(--Very-pale-orange);
+    border-radius: 10px;
+  }
 }
